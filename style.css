@@ -1,0 +1,179 @@
+/* Reset básico e Configurações de Acessibilidade */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --primary-color: #004B87;   /* Azul escuro legível */
+    --secondary-color: #D9381E; /* Vermelho destacado para emergências */
+    --bg-color: #F9F9F9;        /* Fundo claro para descanso visual */
+    --card-bg: #FFFFFF;        /* Fundo dos cartões */
+    --text-color: #1A1A1A;      /* Texto quase preto (Alto Contraste) */
+    --font-scale: 1rem;         /* Tamanho base ajustável */
+}
+
+/* Mecanismo de zoom de fonte usando Checkboxes e CSS Pure */
+#zoom-in:checked ~ .container {
+    --font-scale: 1.25rem; /* Aumenta o texto em 25% */
+}
+
+#zoom-out:checked ~ .container {
+    --font-scale: 0.9rem;  /* Diminui o texto */
+}
+
+/* Ocultar os checkboxes reais de controle */
+.accessibility-toggle {
+    display: none;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    font-size: var(--font-scale);
+}
+
+/* BARRA DE ACESSIBILIDADE FIXA */
+.accessibility-bar {
+    background-color: #222222;
+    color: #FFFFFF;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.accessibility-btn {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 2px solid #000000;
+    padding: 8px 16px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 5px;
+    display: inline-block;
+}
+
+.accessibility-btn:focus, .accessibility-btn:hover {
+    background-color: #FFD700; /* Amarelo de alto destaque ao focar */
+    outline: 3px solid #000000;
+}
+
+/* BANNER PRINCIPAL / HERO */
+.hero {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: 50px 20px;
+    text-align: center;
+    border-bottom: 5px solid #002B50;
+}
+
+.hero h1 {
+    font-size: 2.2em;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* BOTÃO DE AJUDA EM DESTAQUE */
+.btn-help {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 12px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+.btn-help:focus, .btn-help:hover {
+    background-color: #A00000;
+    outline: 4px solid #FFD700;
+}
+
+/* SEÇÕES GERAIS */
+section {
+    padding: 40px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
+}
+
+/* CARDS DE CONTEÚDO */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border: 2px solid #CCCCCC;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 1.3em;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+/* LISTAS ACESSÍVEIS */
+.accessible-list {
+    list-style: none;
+}
+
+.accessible-list li {
+    background-color: var(--card-bg);
+    border-left: 6px solid var(--primary-color);
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 1.1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* CAIXAS DE ALERTA (GOLPES) */
+.alert-card {
+    border-left-color: var(--secondary-color);
+    background-color: #FFF0F0;
+}
+
+/* RODAPÉ */
+footer {
+    background-color: #222222;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    font-size: 1em;
+}

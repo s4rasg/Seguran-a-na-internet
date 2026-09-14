@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia de Segurança Digital para a Terceira Idade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Controles invisíveis para controle de fonte usando apenas CSS -->
+    <input type="radio" name="zoom" id="zoom-normal" class="accessibility-toggle" checked>
+    <input type="radio" name="zoom" id="zoom-in" class="accessibility-toggle">
+    <input type="radio" name="zoom" id="zoom-out" class="accessibility-toggle">
+
+    <!-- Conteúdo Envolto no Container para responder ao zoom -->
+    <div class="container">
+
+        <!-- Barra de Acessibilidade -->
+        <header class="accessibility-bar" role="banner">
+            <span><strong>Acessibilidade:</strong></span>
+            <div>
+                <label for="zoom-in" class="accessibility-btn" title="Aumentar tamanho do texto" tabindex="0">A+ Aumentar Texto</label>
+                <label for="zoom-normal" class="accessibility-btn" title="Tamanho de texto normal" tabindex="0">A Normal</label>
+                <label for="zoom-out" class="accessibility-btn" title="Diminuir tamanho do texto" tabindex="0">A- Diminuir Texto</label>
+            </div>
+        </header>
+
+        <!-- 1. Seção Inicial com Banner e Botão de Ajuda -->
+        <main>
+            <section class="hero" aria-labelledby="titulo-principal">
+                <h1 id="titulo-principal">Navegue na Internet com Segurança</h1>
+                <p>Aprenda a se proteger no mundo digital de forma simples, clara e sem complicações.</p>
+                <a href="#ajuda" class="btn-help" role="button">PRECISA DE AJUDA AGORA? CLIQUE AQUI</a>
+            </section>
+
+            <!-- 2. Seção com Dicas Importantes de Segurança -->
+            <section id="dicas" aria-labelledby="titulo-dicas">
+                <h2 id="titulo-dicas">Dicas Importantes de Segurança</h2>
+                <div class="cards-grid">
+                    <article class="card">
+                        <h3>1. Senhas Fortes e Anotadas</h3>
+                        <p>Crie senhas com letras e números. Dica: é mais seguro anotar suas senhas em um caderno em casa do que salvar no celular.</p>
+                    </article>
+                    <article class="card">
+                        <h3>2. Cuidado com Links</h3>
+                        <p>Nunca clique em links recebidos por mensagem de estranhos. Na dúvida, peça ajuda a um familiar de confiança.</p>
+                    </article>
+                    <article class="card">
+                        <h3>3. Códigos por SMS e WhatsApp</h3>
+                        <p>Nunca informe códigos que chegarem no seu celular para ninguém, nem mesmo para pessoas que dizem ser do seu banco.</p>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 3. Seção sobre Direitos na Internet -->
+            <section id="direitos" aria-labelledby="titulo-direitos">
+                <h2 id="titulo-direitos">Seus Direitos na Internet</h2>
+                <p style="margin-bottom: 15px;">A lei brasileira protege você no ambiente virtual. Conheça as principais garantias:</p>
+                <ul class="accessible-list">
+                    <li>
+                        <strong>Estatuto da Pessoa Idosa:</strong> Garante prioridade no atendimento e proteção contra violência financeira e golpes.
+                    </li>
+                    <li>
+                        <strong>Lei Geral de Proteção de Dados (LGPD):</strong> Suas informações pessoais (como CPF e fotos) só podem ser usadas com sua autorização.
+                    </li>
+                    <li>
+                        <strong>Código de Defesa do Consumidor:</strong> Compras feitas pela internet podem ser canceladas em até 7 dias, com devolução total do dinheiro.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- 4. Seção para Identificar Golpes no Dia a Dia -->
+            <section id="golpes" aria-labelledby="titulo-golpes">
+                <h2 id="titulo-golpes">Como Identificar Golpes Comuns</h2>
+                <ul class="accessible-list">
+                    <li class="alert-card">
+                        <strong>Golpe do Falso Parente no WhatsApp:</strong>
+                        <br>Alguém manda mensagem com um número novo dizendo que é seu filho ou neto pedindo dinheiro? <em>Pare!</em> Ligue imediatamente para o número antigo do seu parente para confirmar.
+                    </li>
+                    <li class="alert-card">
+                        <strong>Falso Funcionário do Banco:</strong>
+                        <br>Bancos <strong>nunca</strong> ligam pedindo sua senha ou pedindo para você fazer uma transferência de emergência para resolver um problema.
+                    </li>
+                    <li class="alert-card">
+                        <strong>Mensagens de Prêmios ou Sorteios:</strong>
+                        <br>Se você recebeu uma mensagem dizendo que ganhou um prêmio, mas precisa pagar uma taxa para receber: é golpe!
+                    </li>
+                </ul>
+            </section>
+
+            <!-- Seção de Destino do Botão de Ajuda -->
+            <section id="ajuda" aria-labelledby="titulo-ajuda" style="background-color: #EAEAEA; border-radius: 8px;">
+                <h2 id="titulo-ajuda">Canais de Ajuda Rápida</h2>
+                <p style="font-size: 1.2em; margin-bottom: 10px;">Se você acha que foi vítima de um golpe ou precisa de orientação legal:</p>
+                <p style="font-size: 1.3em;"><strong>Disque 100:</strong> Direitos Humanos e proteção ao idoso (Ligação Gratuita).</p>
+                <p style="font-size: 1.3em;"><strong>Disque 190:</strong> Polícia Militar (para emergências).</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>Guia de Acessibilidade e Segurança Digital — Feito para proteger você.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
